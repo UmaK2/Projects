@@ -36,7 +36,7 @@ public class SlideDemo1 {
 	
 	Actions action=new Actions(driver);
 
-	for(int i=0;i<4;i++)	
+	for(int i=0;i<2;i++)	
 	{
 		Thread.sleep(500);
 
@@ -44,7 +44,7 @@ public class SlideDemo1 {
 		action.moveByOffset(x, 0).build().perform();
 		x=x+width;
 	}
-	for(int i=4;i>=0;i--)
+	for(int i=2;i>=0;i--)
 	{
 		Thread.sleep(500);
 		action.clickAndHold(slider);
