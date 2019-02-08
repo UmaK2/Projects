@@ -28,7 +28,7 @@ public class SlideDemo1 {
 	driver.get("https://jqueryui.com/slider/");
 	WebElement frame = driver.findElement(By.xpath("//iframe[@class='demo-frame']"));
 	driver.switchTo().frame(frame);
-	WebElement slider = driver.findElement(By.id("slider"));
+	WebElement slider = driver.findElement(By.xpath("//div[@id='slider']/span"));
 	Dimension sliderLocation = slider.getSize();
 	int width = sliderLocation.getWidth();
 	int x = slider.getLocation().getX();
@@ -36,15 +36,15 @@ public class SlideDemo1 {
 	
 	Actions action=new Actions(driver);
 
-	for(int i=0;i<2;i++)	
+	for(int i=0;i<4;i++)	
 	{
-		Thread.sleep(500);
+		Thread.sleep(1000);
 
 		action.clickAndHold(slider);
 		action.moveByOffset(x, 0).build().perform();
 		x=x+width;
 	}
-	for(int i=2;i>=0;i--)
+	for(int i=4;i>=0;i--)
 	{
 		Thread.sleep(500);
 		action.clickAndHold(slider);

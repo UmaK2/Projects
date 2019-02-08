@@ -13,10 +13,10 @@ public class MethodsDemo {
 	public  WebElement  getWebElement(String locators,String value,WebDriver driver)
 	{
 		WebElement webEle=null;
-		By by = null;
+		//By by = null;
 		if(locators.equals("id"))
 		{
-			webEle=driver.findElement(by.id(value));
+			webEle=driver.findElement(By.id(value));
 		}
 		else if (locators.equals("className"))
 		{
